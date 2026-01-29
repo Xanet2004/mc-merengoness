@@ -1,0 +1,32 @@
+.card{
+  border-radius: var(--radius2);
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(var(--blur));
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before{
+  content:"";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(800px 300px at 20% 0%, rgba(77,227,255,.10), transparent 55%),
+    radial-gradient(600px 260px at 90% 15%, rgba(124,92,255,.10), transparent 60%);
+  opacity: .9;
+  pointer-events: none;
+}
+
+.title{
+  margin: 0 0 10px;
+  font-size: 16px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.85);
+  position: relative;
+}
+
+.body{ position: relative; }

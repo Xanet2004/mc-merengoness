@@ -1,0 +1,70 @@
+.bg{
+  position: fixed;
+  inset: -900px;                  /* CLAVE: muy grande para que el blur no “corte” */
+  z-index: -2;
+  pointer-events: none;
+  filter: blur(70px) saturate(120%);
+  opacity: .95;
+  transform: translateZ(0);        /* ayuda a evitar artefactos */
+  will-change: transform;
+}
+
+.blob{
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  border-radius: 999px;
+  mix-blend-mode: screen;
+}
+
+.b1{
+  left: 8%;
+  top: 10%;
+  background: radial-gradient(circle at 30% 30%, rgba(77,227,255,.85), rgba(124,92,255,.35), transparent 68%);
+  animation: float1 16s ease-in-out infinite;
+}
+
+.b2{
+  width: 700px;
+  height: 700px;
+  left: 65%;
+  top: 5%;
+  background: radial-gradient(circle at 35% 30%, rgba(124,92,255,.9), rgba(77,227,255,.25), transparent 70%);
+  animation: float2 19s ease-in-out infinite;
+}
+
+.b3{
+  width: 520px;
+  height: 520px;
+  left: 35%;
+  top: 70%;
+  background: radial-gradient(circle at 35% 30%, rgba(77,227,255,.7), rgba(124,92,255,.28), transparent 68%);
+  animation: float3 18s ease-in-out infinite;
+}
+
+.grain{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .12;                   /* sube/baja 0.08–0.16 */
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+@keyframes float1{
+  0%,100%{ transform: translate(0,0) scale(1); }
+  50%{ transform: translate(40px,-30px) scale(1.06); }
+}
+@keyframes float2{
+  0%,100%{ transform: translate(0,0) scale(1); }
+  50%{ transform: translate(-35px,30px) scale(1.04); }
+}
+@keyframes float3{
+  0%,100%{ transform: translate(0,0) scale(1); }
+  50%{ transform: translate(30px,20px) scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .b1,.b2,.b3{ animation: none; }
+}

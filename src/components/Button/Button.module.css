@@ -1,0 +1,54 @@
+.btn{
+  height: var(--btn-h);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--btn-gap);
+
+  padding: 0 var(--btn-px);
+  border-radius: var(--btn-radius);
+  border: 1px solid var(--btn-border);
+
+  background: var(--btn-bg);
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+
+  font-size: var(--btn-fs);
+  font-weight: var(--btn-fw);
+
+  backdrop-filter: blur(var(--blur));
+  box-shadow: 0 10px 24px rgba(0,0,0,.30);
+
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  background: var(--btn-bg-hover);
+  border-color: var(--btn-border-hover);
+}
+
+.primary{
+  background: var(--btn-primary-bg);
+  border-color: var(--btn-primary-border);
+}
+
+.secondary{
+  /* hereda el estilo base */
+}
+
+.small{
+  /* dejamos esto por compatibilidad, pero ya es el tamaño global */
+}
+
+.btn:focus-visible{
+  outline: 3px solid rgba(77,227,255,.35);
+  outline-offset: 3px;
+}
+
+.btn:disabled{
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none;
+}

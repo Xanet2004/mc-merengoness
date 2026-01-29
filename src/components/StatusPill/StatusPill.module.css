@@ -1,0 +1,33 @@
+.pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.06);
+  font-size: 13px;
+  color: rgba(255,255,255,.86);
+}
+
+.dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 0 0 4px rgba(255,255,255,.08);
+}
+
+.ok{ background: var(--good-bg); border-color: var(--good-border); }
+.ok .dot{
+  background: rgba(77,227,255,.95);
+  box-shadow: 0 0 0 4px rgba(77,227,255,.12);
+}
+
+.bad{ background: var(--bad-bg); border-color: var(--bad-border); }
+.bad .dot{
+  background: rgba(255,110,110,.95);
+  box-shadow: 0 0 0 4px rgba(255,110,110,.12);
+}
+
+.loading{}
