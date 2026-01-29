@@ -18,7 +18,7 @@ export const merengoness = {
     clientZip: '/downloads/Merengoness-1.0.0.zip',
   },
 
-  discordUrl: 'https://discord.gg/XXXX',
+  discordUrl: 'https://youtu.be/dQw4w9WgXcQ',
 
   plugins: [
     'AdvancedServerList',
