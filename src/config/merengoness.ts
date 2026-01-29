@@ -21,8 +21,7 @@ export const merengoness = {
   discordUrl: 'https://discord.gg/XXXX',
 
   plugins: [
-    // 'Dynmap',
-    // 'EssentialsX',
+    'AdvancedServerList',
   ],
 
   footerName: 'Xanet Zaldua',
